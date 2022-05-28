@@ -6,7 +6,7 @@ const Projects = () => {
       <h1 className="text-4xl text-primary text-center my-5">
         Latest Projects
       </h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-20 mt-20">
         <div>
           <img
             src="https://castro.jamstacktemplates.dev/assets/img/projects/1.jpg"
