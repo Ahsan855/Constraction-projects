@@ -2,8 +2,8 @@ import React from "react";
 
 const Service = () => {
   return (
-    <div className="mt-[-110px] p-20">
-      <h1 className="text-4xl font-bold text-[#F0542D] text-center">
+    <div className="mt-[-80px] p-20">
+      <h1 className="text-4xl font-bold text-primary text-center">
         <span className="border-b-2 border-primary">Our Services</span>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-16">
@@ -18,7 +18,7 @@ const Service = () => {
             repudiandae sed consequuntur eligendi? Sunt dignissimos harum minima
             voluptatum laboriosam. Consequuntur?
           </p>
-          <button className="text-secondary underline cursor-pointer text-left my-5">
+          <button className="text-primary hover:underline cursor-pointer text-left my-5">
             see More
           </button>
         </div>
@@ -33,7 +33,7 @@ const Service = () => {
             repudiandae sed consequuntur eligendi? Sunt dignissimos harum minima
             voluptatum laboriosam. Consequuntur?
           </p>
-          <button className="text-secondary underline cursor-pointer text-left my-5">
+          <button className="text-primary hover:underline cursor-pointer text-left my-5">
             see More
           </button>
         </div>
@@ -48,7 +48,7 @@ const Service = () => {
             repudiandae sed consequuntur eligendi? Sunt dignissimos harum minima
             voluptatum laboriosam. Consequuntur?
           </p>
-          <button className="text-secondary underline cursor-pointer text-left my-5">
+          <button className="text-primary hover:underline cursor-pointer text-left my-5">
             see More
           </button>
         </div>
@@ -63,7 +63,7 @@ const Service = () => {
             repudiandae sed consequuntur eligendi? Sunt dignissimos harum minima
             voluptatum laboriosam. Consequuntur?
           </p>
-          <button className="text-secondary underline cursor-pointer text-left my-5">
+          <button className="text-primary hover:underline cursor-pointer text-left my-5">
             see More
           </button>
         </div>
@@ -78,7 +78,7 @@ const Service = () => {
             repudiandae sed consequuntur eligendi? Sunt dignissimos harum minima
             voluptatum laboriosam. Consequuntur?
           </p>
-          <button className="text-secondary underline cursor-pointer text-left my-5">
+          <button className="text-primary hover:underline cursor-pointer text-left my-5">
             see More
           </button>
         </div>
@@ -93,7 +93,7 @@ const Service = () => {
             repudiandae sed consequuntur eligendi? Sunt dignissimos harum minima
             voluptatum laboriosam. Consequuntur?
           </p>
-          <button className="text-secondary underline cursor-pointer text-left my-5">
+          <button className="text-primary hover:underline cursor-pointer text-left my-5">
             see More
           </button>
         </div>
@@ -108,7 +108,7 @@ const Service = () => {
             repudiandae sed consequuntur eligendi? Sunt dignissimos harum minima
             voluptatum laboriosam. Consequuntur?
           </p>
-          <button className="text-secondary underline cursor-pointer text-left my-5">
+          <button className="text-primary hover:underline cursor-pointer text-left my-5">
             see More
           </button>
         </div>
@@ -123,7 +123,7 @@ const Service = () => {
             repudiandae sed consequuntur eligendi? Sunt dignissimos harum minima
             voluptatum laboriosam. Consequuntur?
           </p>
-          <button className="text-secondary underline cursor-pointer text-left my-5">
+          <button className="text-primary hover:underline cursor-pointer text-left my-5">
             see More
           </button>
         </div>

@@ -17,7 +17,7 @@ const Blog = () => {
             repellat saepe porro dolore sit dolores tempore. Minus eos ullam
             illo.
           </p>
-          <button className="underline uppercase mt-2 text-left hover:text-primary">
+          <button className="hover:underline uppercase mt-2 text-left text-primary">
             See More
           </button>
         </div>
@@ -33,7 +33,7 @@ const Blog = () => {
             repellat saepe porro dolore sit dolores tempore. Minus eos ullam
             illo.
           </p>
-          <button className="underline uppercase mt-2 text-left hover:text-primary">
+          <button className="hover:underline uppercase mt-2 text-left text-primary">
             See More
           </button>
         </div>
@@ -49,7 +49,7 @@ const Blog = () => {
             repellat saepe porro dolore sit dolores tempore. Minus eos ullam
             illo.
           </p>
-          <button className="underline uppercase mt-2 text-left hover:text-primary">
+          <button className="hover:underline uppercase mt-2 text-left text-primary">
             See More
           </button>
         </div>
@@ -65,7 +65,7 @@ const Blog = () => {
             repellat saepe porro dolore sit dolores tempore. Minus eos ullam
             illo.
           </p>
-          <button className="underline uppercase mt-2 text-left hover:text-primary">
+          <button className="hover:underline uppercase mt-2 text-left text-primary">
             See More
           </button>
         </div>

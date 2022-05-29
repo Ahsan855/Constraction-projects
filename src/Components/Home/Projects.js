@@ -23,7 +23,7 @@ const Projects = () => {
             provident voluptate ipsa pariatur dolor neque vitae aliquam
             aspernatur, sapiente nihil quam molestiae!
           </p>
-          <button className="text-primary underline uppercase">
+          <button className="text-primary hover:underline uppercase">
             view more
           </button>
         </div>
