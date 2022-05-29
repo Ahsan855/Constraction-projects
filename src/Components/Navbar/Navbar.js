@@ -28,25 +28,25 @@ const Navbar = () => {
               class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#F0542D] rounded-box w-52"
             >
               <li>
-                <a>Home</a>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <a>About Us</a>
+                <NavLink to="/about">About Us</NavLink>
               </li>
               <li>
-                <a>Products</a>
+                <NavLink to="/products">Products</NavLink>
               </li>
               <li>
-                <a>Review</a>
+                <NavLink to="review">Review</NavLink>
               </li>
               <li>
-                <a>Services</a>
+                <NavLink to="/service">Services</NavLink>
               </li>
               <li>
-                <a>Contact</a>
+                <NavLink to="/contact">Contact</NavLink>
               </li>
               <li>
-                <a>Login</a>
+                <NavLink to="/login">Login</NavLink>
               </li>
             </ul>
             <a className="text-2xl ml-5 text-white">Constraction</a>
@@ -55,25 +55,25 @@ const Navbar = () => {
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal p-0">
             <li>
-              <a className="text-white">Home</a>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <a className="text-white">About Us</a>
+              <NavLink to="/about">About Us</NavLink>
             </li>
             <li>
-              <a className="text-white">Products</a>
+              <NavLink to="/product">Products</NavLink>
             </li>
             <li>
-              <a className="text-white">Review</a>
+              <NavLink to="review">Review</NavLink>
             </li>
             <li>
-              <a className="text-white">Services</a>
+              <NavLink to="/service">Services</NavLink>
             </li>
             <li>
-              <a className="text-white">Contact</a>
+              <NavLink to="/contact">Contact</NavLink>
             </li>
             <li>
-              <a className="text-white">Login</a>
+              <NavLink to="/login">Login</NavLink>
             </li>
           </ul>
         </div>
