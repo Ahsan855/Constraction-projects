@@ -43,7 +43,8 @@ const Contact = () => {
             type="text"
             placeholder="Name"
             className="input input-bordered input-primary w-full max-w-xs mt-7"
-          />
+          />{" "}
+          <br />
           <input
             type="text"
             placeholder="Your Email"
