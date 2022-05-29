@@ -47,9 +47,6 @@ const Navbar = () => {
                 <NavLink to="/products">Products</NavLink>
               </li>
               <li>
-                <NavLink to="review">Review</NavLink>
-              </li>
-              <li>
                 <NavLink to="/service">Services</NavLink>
               </li>
               <li>
@@ -83,37 +80,46 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink className="hover:underline" to="/">
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/about">About Us</NavLink>
+              <NavLink className="hover:underline" to="/about">
+                About Us
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/blog">Blogs</NavLink>
+              <NavLink className="hover:underline" to="/blog">
+                Blogs
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/product">Products</NavLink>
+              <NavLink className="hover:underline" to="/product">
+                Products
+              </NavLink>
             </li>
             {user && (
               <li>
-                <NavLink className="my-2 mr-5font-semibold" to="/review">
-                  DashBoard
-                </NavLink>
-              </li>
-            )}
-            {user && (
-              <li>
-                <NavLink className="my-2 mr-5 font-semibold" to="/service">
+                <NavLink
+                  className="my-2 mr-5 font-semibold hover:underline"
+                  to="/service"
+                >
                   Service
                 </NavLink>
               </li>
             )}
             <li>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink className="hover:underline" to="/contact">
+                Contact
+              </NavLink>
             </li>
             {user && (
               <li>
-                <button onClick={logout} className="my-2 mr-5 font-semibold">
+                <button
+                  onClick={logout}
+                  className="my-2 mr-5 font-semibold hover:underline"
+                >
                   Logout
                 </button>
               </li>
@@ -121,12 +127,18 @@ const Navbar = () => {
             {!user && (
               <>
                 <li>
-                  <NavLink className="my-2 mr-5 font-semibold" to="/login">
+                  <NavLink
+                    className="my-2 mr-5 font-semibold hover:underline"
+                    to="/login"
+                  >
                     Login
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink className="my-2 mr-5 font-semibold " to="/signup">
+                  <NavLink
+                    className="my-2 mr-5 font-semibold hover:underline"
+                    to="/signup"
+                  >
                     Signup
                   </NavLink>
                 </li>

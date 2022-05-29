@@ -9,7 +9,6 @@ import Signup from "./Components/Login/Signup";
 import Navbar from "./Components/Navbar/Navbar";
 import NotFound from "./Components/NotFound/NotFound";
 import Products from "./Components/Product/Products";
-import Review from "./Components/Review/Review";
 import Service from "./Components/Service/Service";
 
 function App() {
@@ -25,7 +24,6 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/review" element={<Review />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
