@@ -1,18 +1,18 @@
 import React from "react";
 import {
-  useSignInWithEmailAndPassword,
-  useSignInWithGoogle,
+  useCreateUserWithEmailAndPassword,
+  useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../Loading/Loading";
 
-const Login = () => {
-  const [signInWithEmailAndPassword, user, loading, error] =
-    useSignInWithEmailAndPassword(auth);
-  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+const Signup = () => {
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
 
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
   const {
     register,
     formState: { errors },
@@ -23,38 +23,61 @@ const Login = () => {
   let location = useLocation();
   let from = location.state?.from?.pathname || "/";
 
-  const onSubmit = async (data) => {
-    console.log(data);
-    signInWithEmailAndPassword(data.email, data.password);
-  };
-  if (loading || gLoading) {
-    return <Loading />;
-  }
-
-  if (user || gUser) {
-    navigate(from, { replace: true });
-  }
   let errorMessage;
-
-  if (error || gError) {
+  if (error || updateError) {
     errorMessage = (
       <span className="text-sm text-red-500">
-        {error?.message} {gError?.message}
+        {error?.message} {updateError?.message}
       </span>
     );
   } else {
     errorMessage = "";
   }
+
+  const onSubmit = async (data) => {
+    await createUserWithEmailAndPassword(data.email, data.password);
+    await updateProfile({ displayName: data.name });
+    // navigate(from, { replace: true });
+  };
+  if (user) {
+    navigate(from, { replace: true });
+  }
+
+  if (loading || updating) {
+    return <Loading />;
+  }
+
   // console.log(user?.user?.displayName);
   return (
     <div className="py-10 lg:py-36 max-w-7xl justify-center flex items-center mx-auto">
-      <div className="card md:w-2/4 mx-auto  shadow-2xl bg-base-100">
+      <div className="card md:w-2/4 mx-auto shadow-2xl bg-base-100">
         <div className="card-body">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-control">
               <h2 className="text-3xl font-bold text-primary text-center border-b-4 w-3xl mx-auto border-primary mt-2">
-                login
+                Signup
               </h2>
+              <label className="label">
+                <span className="text-primary">Your Name</span>
+              </label>
+              <input
+                type="name"
+                placeholder="Enter your Name"
+                className="input input-bordered text-secondary"
+                {...register("name", {
+                  required: {
+                    value: true,
+                    message: "name is required",
+                  },
+                })}
+              />
+              <label className="label">
+                {errors.name?.type === "required" && (
+                  <span className="text-red-500">{errors.name.message}</span>
+                )}
+              </label>
+            </div>
+            <div className="form-control">
               <label className="label">
                 <span className="text-primary">Your Email</span>
               </label>
@@ -75,12 +98,16 @@ const Login = () => {
               />
               <label className="label">
                 {errors.email?.type === "required" && (
-                  <span className="text-red-500">{errors.email.message}</span>
+                  <span className="label-text-alt text-red-500">
+                    {errors.email.message}
+                  </span>
                 )}
               </label>
               <label className="label">
                 {errors.email?.type === "pattern" && (
-                  <span className="text-red-500">{errors.email.message}</span>
+                  <span className="label-text-alt text-red-500">
+                    {errors.email.message}
+                  </span>
                 )}
               </label>
             </div>
@@ -105,7 +132,7 @@ const Login = () => {
               />
               <label className="label">
                 {errors.password?.type === "required" && (
-                  <span className="text-red-500">
+                  <span className="label-text-alt text-red-500">
                     {errors.password.message}
                   </span>
                 )}
@@ -118,34 +145,27 @@ const Login = () => {
                 )}
               </label>
             </div>
-
+            <div className="flex justify-between ">
+              <div className="">
+                <Link to="/login">
+                  <span className="text-neutral">Have a account?</span>
+                  <span className="text-primary text-xl">Login</span>
+                </Link>
+              </div>
+            </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary text-white">Login</button>
+              <input
+                type="submit"
+                className="btn btn-primary text-white"
+                value="Signup"
+              />
             </div>
-            <div className="pt-5">{errorMessage}</div>
           </form>
-          <div className="flex justify-center py-2 ">
-            <div className="">
-              <Link to="/signup">
-                <span className="text-secondary hover:underline">
-                  Create a new account?
-                </span>
-                <span className="text-primary text-xl"> Signup</span>
-              </Link>
-            </div>
-          </div>
-
-          <div className="divider">OR</div>
-          <button
-            className="btn btn-outline btn-primary"
-            onClick={() => signInWithGoogle()}
-          >
-            Google With Continue{" "}
-          </button>
+          {errorMessage}
         </div>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Signup;

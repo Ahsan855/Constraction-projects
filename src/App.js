@@ -5,9 +5,9 @@ import Footer from "./Components/Footer/Footer";
 import Blog from "./Components/Home/Blog";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
+import Signup from "./Components/Login/Signup";
 import Navbar from "./Components/Navbar/Navbar";
 import NotFound from "./Components/NotFound/NotFound";
-import Product from "./Components/Product/Product";
 import Products from "./Components/Product/Products";
 import Review from "./Components/Review/Review";
 import Service from "./Components/Service/Service";
@@ -24,6 +24,7 @@ function App() {
         <Route path="/product" element={<Products />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/review" element={<Review />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

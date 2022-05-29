@@ -15,8 +15,8 @@ const Products = () => {
     <div className="my-20">
       <h1 className="text-center">
         {" "}
-        <span className="text-3xl font-bold text-primary text-center border-b-4 w-3xl mx-auto border-primary mt-2">
-          All Products
+        <span className="text-4xl font-bold text-primary text-center border-b-4 w-3xl mx-auto border-primary mt-2">
+          Your Products
         </span>
       </h1>
       <div className="grid lg:grid-cols-3 gap-3 md:grid-cols-2 grid-cols-1  ">
