@@ -31,7 +31,8 @@ const Contact = () => {
           </p>
           <p className="hover:text-primary">
             <div className=" border-l-4 border-primary pl-3">
-              muhammadrifathasan9869@gmail.com muhammadrifathasan9869@yahoo.com
+              muhammadrifathasan9869@gmail.com <br />{" "}
+              muhammadrifathasan9869@yahoo.com
             </div>
           </p>
         </div>
