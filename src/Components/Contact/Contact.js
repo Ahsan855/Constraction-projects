@@ -2,11 +2,18 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div>
-      <div>
-        <img src="" alt="" />
+    <div className="mt-20">
+      <div className="w-3/6 mx-auto">
+        <h1 className="text-4xl text-primary text-center mb-[-70px] mt-5">
+          Contact
+        </h1>
+        <img
+          className="w-full mx-auto mt-28 h-3/4 rounded-lg"
+          src="https://images.squarespace-cdn.com/content/v1/524883b7e4b03fcb7c64e24c/1443035740954-0KYX5313WPOAVCH44RIQ/image-asset.png?format=2500w"
+          alt=""
+        />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-20 w-10/12 mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-20 py-10 w-10/12 mx-auto">
         <div className="h-3/4 my-auto">
           <h1 className="text-2xl font-bold hover:text-primary mb-10">
             Contact Information
